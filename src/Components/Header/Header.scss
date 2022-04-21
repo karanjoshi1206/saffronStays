@@ -1,0 +1,21 @@
+.header {
+	background: #3564e2;
+	padding: 15px 110px;
+	display: flex;
+	h1 {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		color: #ffffff;
+		margin-left: 10px;
+	}
+	img {
+		margin: 0 7px;
+	}
+}
+@media (max-width: 900px) {
+	.header {
+		padding: 15px 10px;
+		clip-path: ellipse(69% 100% at 50.19% 0%);
+	}
+}

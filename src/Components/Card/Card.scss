@@ -1,0 +1,298 @@
+.card {
+	// width: 1000px;
+	// height: 294px;
+
+	background: #ffffff;
+	border: 1px solid #dddddd;
+	box-sizing: border-box;
+	border-radius: 12px;
+	overflow: hidden;
+	display: flex;
+	margin: 24px 0;
+	.thumbnails {
+		display: flex;
+		img {
+			margin-right: 4px;
+		}
+		.thumbNail {
+			filter: brightness(50%);
+			margin-top: 3px;
+			position: relative;
+			display: flex;
+			align-self: center;
+			align-items: center;
+			justify-content: center;
+			p {
+				position: absolute;
+				color: white;
+				font-family: "Poppins";
+				font-style: normal;
+				font-weight: 400;
+				font-size: 12px;
+			}
+			&:hover {
+				filter: brightness(100%);
+			}
+		}
+	}
+	.slick-slider {
+		width: 400px;
+		height: 220px;
+		.slick-arrow {
+			height: 50px;
+			width: 50px;
+		}
+		.slick-next {
+			right: 0;
+		}
+
+		.slick-prev {
+			left: 0;
+		}
+	}
+	.cardContent {
+		// flex-grow: 1;
+		width: 100%;
+
+		padding: 0 24px;
+		position: relative;
+		.heart {
+			background: #ffffff;
+			box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+			border-radius: 50%;
+			width: 32px;
+			height: 32px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			position: absolute;
+			right: 24px;
+			top: 24px;
+		}
+		.cardContentTop {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-direction: column;
+			margin: 0;
+			margin-top: 24px;
+			.cardContentTop-left {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				h1 {
+					font-family: "Poppins";
+					font-style: normal;
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 21px;
+					margin-bottom: 8px;
+					margin-left: 5px;
+				}
+			}
+		}
+		.flex {
+			display: flex;
+			align-items: center;
+			margin: 10px 0;
+			.ratingBtn {
+				width: 52px;
+				height: 25px;
+
+				background: #01751b;
+				border-radius: 4px;
+				font-size: 12px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				img {
+					margin-right: 5px;
+				}
+			}
+			span {
+				font-family: "Poppins";
+				font-style: normal;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 150%;
+				text-decoration-line: underline;
+				margin-left: 10px;
+
+				color: #666666;
+			}
+		}
+		.extras {
+			display: flex;
+			align-items: center;
+			margin: 7px 0;
+			.extra {
+				margin: 0 6px;
+				display: flex;
+				align-items: center;
+			}
+			span {
+				font-style: normal;
+				font-weight: 300;
+				font-size: 14px;
+				margin-left: 4px;
+				color: #333333;
+			}
+		}
+		.title {
+			font-family: "Poppins";
+			font-style: normal;
+			font-weight: 600;
+			font-size: 24px;
+			margin: 0;
+			// line-height: 10px;
+		}
+		.cardContentBottom {
+			display: flex;
+			justify-content: space-between;
+			.priceContainer {
+				.price {
+					display: flex;
+					align-items: center;
+					h4 {
+						font-family: "Poppins";
+						font-style: normal;
+						font-weight: 500;
+						font-size: 15px;
+
+						color: #333333;
+						margin: 0;
+						margin-right: 10px;
+						padding: 0;
+					}
+					p {
+						font-family: "Poppins";
+						font-style: normal;
+						font-weight: 500;
+						font-size: 14px;
+
+						text-decoration-line: line-through;
+
+						/* NEW UI 2021/Black & Grays/Medium Text */
+					}
+				}
+				span {
+					font-family: "Poppins";
+					display: block;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 14px;
+					margin-top: -10px;
+					color: #666666;
+				}
+			}
+			.price-btn {
+				background: #ffffff;
+				width: 180px;
+				height: 48px;
+				border: 2px solid #3564e2;
+				box-sizing: border-box;
+				border-radius: 5px;
+
+				font-family: "Inter";
+				font-style: normal;
+				font-weight: 600;
+				font-size: 14px;
+				color: #3564e2;
+				text-align: center;
+				transition: 0.3s all ease;
+				&:hover {
+					background: #3564e2;
+					color: #ffffff;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+.caraouselDots {
+	position: absolute;
+	top: 200px;
+	left: 115px;
+	display: inline-block;
+	vertical-align: center;
+	margin: auto;
+	padding: 0;
+	border-radius: 40px;
+	width: 40%;
+	text-align: center;
+	li {
+		list-style: none;
+		cursor: pointer;
+		display: inline-block;
+		margin: 0 3px;
+		padding: 0;
+		button {
+			border: none;
+			background-color: white;
+			opacity: 0.6;
+			color: transparent;
+			cursor: pointer;
+			display: block;
+
+			height: 7px;
+			width: 7px;
+			border-radius: 8px;
+		}
+		&.slick-active button {
+			background-color: white;
+			opacity: 1;
+			transform: scale(1.2);
+		}
+	}
+}
+@media (max-width: 900px) {
+	.card {
+		width: 100%;
+		box-shadow: 0px 0px 50px 4px rgba(221, 221, 221, 0.35);
+		flex-direction: column;
+		padding-bottom: 15px;
+
+		.cardContent {
+			position: relative;
+			.heart {
+				position: relative;
+				top: -210px;
+				right: -390px;
+				background: rgba(0, 0, 0, 0.4);
+			}
+			.extras {
+				display: none;
+			}
+			.cardContentTop {
+				flex-direction: column-reverse;
+			}
+			.cardContentBottom {
+				position: absolute;
+				top: 12px;
+				right: 56px;
+				width: max-content;
+				button {
+					display: none;
+				}
+				.price {
+					flex-direction: column-reverse;
+				}
+			}
+		}
+		.thumbnails {
+			display: none;
+		}
+		.slick-slider {
+			width: 100%;
+			max-height: 220px;
+			.slick-list {
+				height: 100%;
+			}
+		}
+	}
+	.caraouselDots {
+		left: 140px;
+	}
+}
