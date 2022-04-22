@@ -243,13 +243,14 @@
 .caraouselDots {
 	position: absolute;
 	top: 200px;
-	left: 115px;
+	left: 50%;
 	display: inline-block;
 	vertical-align: center;
 	margin: auto;
 	padding: 0;
 	border-radius: 40px;
-	width: 40%;
+	// width: 40%;
+	transform: translateX(-50%);
 	text-align: center;
 	li {
 		list-style: none;
@@ -372,7 +373,7 @@
 			}
 		}
 	}
-	.caraouselDots {
-		left: 140px;
-	}
+	// .caraouselDots {
+	// 	left: 140px;
+	// }
 }
