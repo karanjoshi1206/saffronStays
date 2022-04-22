@@ -33,6 +33,7 @@ const Card = ({ item }) => {
 					<img src='./assets/cardThumb.svg' alt='' />
 					<img src='./assets/cardThumb.svg' alt='' />
 					<div className='thumbNail'>
+						<div className='overlay'></div>
 						<p>View All</p>
 						<img src='./assets/cardThumb.svg' alt='' />
 					</div>
@@ -42,7 +43,7 @@ const Card = ({ item }) => {
 			<div className='cardContent'>
 				<div onClick={() => setClicked(!clicked)} className='heart'>
 					{clicked ? (
-						<img src='./assets/redHeart.svg' />
+						<img src='./assets/redHeart.svg' alt='' />
 					) : (
 						<img src='./assets/heart.svg' alt='' />
 					)}
