@@ -1,7 +1,10 @@
 .header {
 	background: #3564e2;
 	padding: 15px 110px;
-	display: flex;
+	.header-content {
+		display: flex;
+		align-items: center;
+	}
 	h1 {
 		font-style: normal;
 		font-weight: 700;
@@ -16,6 +19,19 @@
 @media (max-width: 900px) {
 	.header {
 		padding: 15px 10px;
-		clip-path: ellipse(69% 100% at 50.19% 0%);
+		.header-content {
+			margin-top: 10px;
+		}
+		h1 {
+			font-size: 16px;
+		}
+		img {
+			width: 40px;
+			height: 40px;
+		}
+		.arrow {
+			width: 23.04px;
+			height: 24px;
+		}
 	}
 }
