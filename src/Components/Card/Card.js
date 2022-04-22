@@ -55,22 +55,48 @@ const Card = ({ item }) => {
 
 					<h1 className='title'>{item.title}</h1>
 				</div>
-				<span> Entire Villa • 3 Bedrooms • Sleeps 15</span>
+				<span className='description'>
+					{" "}
+					Entire Villa • 3 Bedrooms • Sleeps 15
+				</span>
 				<div className='flex'>
 					{window.innerWidth > 900 ? (
-						<div className='ratingBtn'>
-							<img src='./assets/star.svg' alt='' />
-							{item.rating}{" "}
-						</div>
+						<>
+							<div className='ratingBtn'>
+								<img src='./assets/star.svg' alt='' />
+								{item.rating}{" "}
+							</div>
+							<span>(1000 reviews) • Excellent</span>
+						</>
 					) : (
 						<>
 							{[0, 0, 0, 0].map((elem, idx) => (
 								<FilledStar key={idx} />
 							))}
 							<EmptyStar />
+							<svg
+								style={{
+									marginLeft: "5px",
+								}}
+								width='1'
+								height='14'
+								viewBox='0 0 1 14'
+								fill='none'
+								xmlns='http://www.w3.org/2000/svg'>
+								<line
+									x1='0.5'
+									y1='14'
+									x2='0.500001'
+									y2='-2.18557e-08'
+									stroke='#DDDDDD'
+								/>
+							</svg>
+
+							<span style={{ textDecoration: "none", marginRight: "5px" }}>
+								105 reviews
+							</span>
 						</>
 					)}
-					<span>(1000 reviews) • Excellent</span>
 				</div>
 				<div className='extras'>
 					<div className='extra'>
@@ -94,7 +120,9 @@ const Card = ({ item }) => {
 							<h4>₹{item.price}</h4>
 							<p>₹{item.discountedPrice} </p>
 						</div>
-						<span>Per day</span>{" "}
+						<div>
+							<span>Per day</span>{" "}
+						</div>
 					</div>
 					<button className='price-btn'>View Details</button>
 				</div>
