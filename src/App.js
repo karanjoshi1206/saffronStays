@@ -7,7 +7,7 @@ function App() {
 	return (
 		<div className='App'>
 			<Header />
-			<img className='ellipse' src='./assets/ellipse.svg' />
+			<img className='ellipse' src='./assets/ellipse.svg' alt='' />
 
 			<div className='filters'>
 				<div className='filter'>
