@@ -7,6 +7,8 @@ function App() {
 	return (
 		<div className='App'>
 			<Header />
+			<img className='ellipse' src='./assets/ellipse.svg' />
+
 			<div className='filters'>
 				<div className='filter'>
 					<p>CHECK-IN</p>
